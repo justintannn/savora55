@@ -1,0 +1,112 @@
+.contactus {
+    text-align:center;
+    font-size:30px;
+    padding:40px;
+    margin:0;
+    justify-items: center;
+
+}
+.imgofcontact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 870px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: -1;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.ContactTitle {
+    font-size:40px;
+    font-weight:bold;
+    color:black;
+    PADDING:40px;
+}
+
+.icon-down {
+    height:40px;
+    width:40px;
+}
+
+.inquiry {
+    text-align:center;
+    font-size:50px;
+}
+.column {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+
+
+  }
+  
+  .column img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sales {
+    height: 500px; /* Adjust the height as desired */
+    font-size:35px;
+    margin-top:50px;
+  }
+
+  .service {
+  
+    font-size:35px;
+    height:500px;
+    margin-top:50px;
+  }
+
+  .column:hover img {
+    transform: scale(1.08); /* Add this line to scale the image on hover */
+  }
+  
+  .column p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s; /* Add this line to enable smooth transition */
+    font-size:56px;
+  }
+  
+  .column:hover p {
+    opacity: 1; /* Add this line to show the text on hover */
+    margin-top:10px;
+  }
+  .column img:hover {
+    box-shadow: 0 0  100px rgba(105, 6, 6, 0.7); /* Adjust the values as needed */
+}
+  
+.empty {
+  height:200px;
+  width:auto;
+}
+

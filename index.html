@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="popout.css">
+    <link rel="stylesheet" href="popoutsec.css">
+    <link rel="stylesheet" href="cart.css">
+    <script src="cart.js"></script>
+
+    <!--Bootstrap Links-->
+    
+    <style>
+
+
+      .prev {
+        left: 0;
+        font-size:40px;
+        padding:10px;
+      }
+    
+      .next {
+        right: 0;
+        font-size:40px;
+        padding:10px;
+      }
+      
+  
+      .mySlides img {
+              width: 100%;
+              height: 300px; /* Adjust the height as per your needs */
+              object-fit: cover;
+      }
+        .nav-container.sticky {
+            position: fixed;
+            animation: slideDown 0.3s;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .icon img {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px;
+          }
+        .icon {
+          margin-top:10px;
+        }
+    </style> 
+</head>
+
+<body>
+    <form>
+      <nav>
+      <div class="background-image"></div>
+      <div class="nav-container">
+        <ol class="nav">
+                Savora
+            <div class="icon">
+              <a href=#top><img src="bottle.png" alt="logo" class="symbol"></a>
+          </div>
+            <li class="navbar active"><a href="index.html" >About Us</a></li>
+            <li class="navbar"><a href="ViewProduct.html" target="_blank">View Products</a></li>
+            <li class="navbar"><a href="Findus.html" target="_blank">Find us</a></li>
+            <li class="navbar"><a href="ContactUs.html" target="_blank">Contact us</a></li>
+            <div class="icon">
+              
+
+              <div class="cart-container">
+                <a href="cart.html">
+                  <img src="shopping-cart.png" alt="shopping-cart" class="symbol" > <span class="cart-count" id="cart-counts">0</span>
+                </a>
+              </div>
+
+             
+              <a href="signup.html" target="_blank"><img src="user.png" alt="user-login" class="symbol"></a>
+            </div>
+        </ol>
+        
+        
+        
+    </div>
+    </nav>
+    </form>
+    <br/>
+    <div class="image-container">
+      <section class="hidden">
+    <div class="whole">
+            About us...
+            <p>
+                Welcome to Savora, a brand new drink company on a mission to quench your thirst with unique and refreshing beverages.
+              </p> 
+              <p>
+                <div class="flex-container">
+                <img src="BerriesFlavour.png" alt="berries"  class="img1" >
+             
+                   <div class="sec1">
+                It all started with a passion for crafting exceptional drinks that combine the finest ingredients, innovative flavors, and a commitment to quality. Inspired by the joy and satisfaction that comes from enjoying a delicious beverage, we embarked on a journey to create a brand that would stand out in the industry.
+              </p>
+            </div>
+          </div>
+          <div class="flex-container">
+          <div class="second-container">
+          <div class="sec2">
+          
+              <p>
+                Our team of talented mixologists and beverage enthusiasts have poured their hearts and souls into creating a diverse range of flavors that will tantalize your taste buds and leave you craving for more. Each drink is meticulously crafted, ensuring a perfect balance of flavors and a delightful sensory experience with every sip.
+              </p>
+              <p>
+                We believe in using only the best ingredients sourced from trusted suppliers, focusing on freshness and sustainability. Our commitment to quality extends to our production processes, where we employ state-of-the-art facilities and strict quality control measures to ensure consistency and excellence in every bottle we produce.
+              </p>
+            </div>
+            <img src="SCIENTIST.png" alt="scientist" class="img2">
+          </div>
+        </div>
+          <div class="sec3">
+            
+              <p>
+                At Savora, we are not just a beverage company; we are a community of drink enthusiasts who share a love for great flavors and memorable experiences. Join us on this exciting journey as we continue to innovate, explore new taste horizons, and bring joy to your everyday moments.
+              </p>
+              <p>
+                Thank you for being a part of our story. Cheers to new beginnings!
+              </p>
+              <img src="happydrinking.jpeg" alt="drinking" class="img3">
+              </div>
+      </section>
+    </div>
+  </div>
+    <script>
+    /* Scroll Animator*/ 
+ 
+      const observer = new IntersectionObserver((entries) => { 
+        entries.forEach((entry) => { 
+          console.log(entry)  
+          if (entry.isIntersecting) { 
+            entry.target.classList.add('show'); 
+          } else { 
+            entry.target.classList.remove('show'); 
+          } 
+        }); 
+      }); 
+      
+      const hiddenElements = document.querySelectorAll('.hidden'); 
+      hiddenElements.forEach((eL) => { observer.observe(eL) }); 
+      /* End of scroll animator */
+  </script>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
+  <script>
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $(".nav-container").addClass("sticky");
+        } else {
+            $(".nav-container").removeClass("sticky");
+        }
+    });
+</script>
+<footer>
+  <div class="icon-container">
+    <a href="https://www.instagram.com/" target="_blank">
+      <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+     <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+      <ion-icon name="logo-twitter"></ion-icon> 
+    </a>
+</div>
+
+<div class="text-container">
+  <p>Terms Of Use</p>
+  <p>Privacy Policy</p>
+ <a href="faq.html" alt="faq-page" target="_blank"><p>FAQS</p></a>
+</div>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment done</title>
+    <link rel="stylesheet" href="paymentdone.css">
+
+    
+        
+</head>
+<body>
+    <form action="index.html" method="get">
+    <p>Thank you for purchasing our products.</p>
+    <p>Products will arrive in 3-5 business days.</p>
+    <button type="submit" name ="home" value="return" > Return to home</button>
+</form>
+
+<script>
+    // Function to clear cart items from localStorage
+    function clearCart() {
+        localStorage.removeItem('productsInCart');
+        localStorage.removeItem('totalCost');
+        localStorage.removeItem('cartNumbers');
+    }
+
+    // Add an event listener to the form submit button
+    document.querySelector('form').addEventListener('submit', function () {
+        // Call the clearCart function when the form is submitted (button is pressed)
+        clearCart();
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Retrieve the form data from local storage
+      let formData = JSON.parse(localStorage.getItem('formData'));
+  
+      // Check if formData exists (data was submitted from the previous page)
+      if (formData) {
+        // Use the form data as needed (e.g., display it in the page)
+        console.log(formData);
+  
+        // Clear the form data from local storage (optional)
+        localStorage.removeItem('formData');
+      }
+    });
+  </script>
+</body>
+</html>

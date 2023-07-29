@@ -1,0 +1,23 @@
+h1 {
+    text-align:center;
+    font-size:55px;
+}
+
+p {
+    text-align:center;
+    font-size:35px;
+}
+.ha {
+    padding:40px;
+}
+body {
+    background-color:grey;
+}
+
+button {
+    height:50px;
+    width:150px;
+    font-size:18px;
+    color: black;
+    border-radius:20%;
+}

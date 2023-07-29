@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="pwrs.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Reset</h1>
+        <form onsubmit="return validateForm();" action="passwordrsdone.html" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">New password:</label>
+            <input type="password" id="password" name="password" required>
+           
+            <label for="passwords">Confirm password:</label>
+            <input type="password" id="passwords" name="passwords" required>
+            <input type="submit" value="Reset Password">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password1 = document.getElementById("password").value;
+            var password2 = document.getElementById("passwords").value;
+
+            if (password1 !== password2) {
+                alert("Passwords do not match. Please try again.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

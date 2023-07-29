@@ -1,0 +1,68 @@
+
+.perk-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.perk-list li {
+  width: calc(33.33% - 10px); /* Adjust the width as needed */
+  margin-top: 120px;
+  justify-content: center;
+  border: 1px solid #ccc;
+  font-size: 25px;
+    padding: 30px;
+    text-align:center;
+
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding:5px;
+    max-height:800px;
+    
+  }
+  .box {
+    flex-basis: 40%;
+    padding: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size:25px;
+    height:100px;
+    
+  }
+
+  .sign-up-form {
+    flex-basis: 40%;
+    padding:2px;
+    margin-left: 20px;
+    margin-top:150px;
+    max-width:500px;
+    margin-bottom:5px;
+    
+   
+  }
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 870px;
+    background-image: url(membershipperks.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    z-index: -1;
+    margin-top:130px;
+  }
+.Message{
+font-size:30px;
+    text-align:center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

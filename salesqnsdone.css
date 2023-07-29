@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:grey;
+}
+
+.center {
+    text-align: center;
+    height: 100%;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: rgb(109, 109, 10);
+    color: white;
+    border: none;
+    cursor: pointer;
+}

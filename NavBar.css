@@ -1,0 +1,249 @@
+.nav-container{
+    
+    padding-top:10px; /* Adjust the padding as needed */
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+    position:sticky;
+    width: 100%;
+    
+
+}
+
+.nav-container.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: slideDown 0.3s;
+  }
+
+  
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #bbb;
+    border-radius:20px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:25px;
+    background-color:grey;
+    color:white !important;
+  
+}
+
+.navbar {
+    float: left;
+    border-right: 1px solid #bbb;
+    box-sizing:border-box;
+    
+}
+
+
+
+.navbar:last-child {
+    border-right: none;
+}
+
+.navbar a {
+    display:block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    border-radius:20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a:hover {
+    background-color: rgb(59, 56, 56);
+}
+
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    transition: transform 0.3s ease, border-color 0.5s ease;
+    transform:scale(0);
+  }
+  
+  .navbar a:hover::before {
+    background-color: rgba(17,17,17,0.5);
+    color:white;
+    transform:scale(1);
+  }
+  .navbar a.active {
+    text-decoration: underline;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    RIGHT:0;
+    width: 100%;
+    height: 900px;
+    background-image: url("logo-name.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1; 
+   
+}
+
+.image-container {
+    position: relative;
+    margin-top: 900px; 
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+    height:auto;
+    width:auto;
+    font-size:30pt;
+  
+}
+
+.symbol {
+  height: 50px;
+  width: 45px;
+  padding:10px;
+  size:20px;
+}
+
+@media (max-width: 768px) {
+  .symbol {
+    height: 40px;
+    width: 35px;
+  }
+  .sec1,
+  .sec2,
+  .sec3 {
+    padding: 0; /* Remove padding for mobile */
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+  
+  
+  .img1,
+  .img2,
+  .img3 {
+    width: 100%; /* Adjust image width for mobile */
+    height: auto; /* Allow the image height to adjust proportionally */
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar {
+    width: 100%;
+    border: none;
+    margin-bottom: 5px;
+  }
+
+  .icon-container {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .background-image {
+    height: 300px;
+    
+    position: relative;
+    z-index: -1;
+  }
+}
+.icon {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Adjust the margin top value as needed */
+}
+
+.navbar.active {
+  background-color:rgb(41, 37, 37);
+  color:white;
+  border-radius:10px;
+}
+
+.abvslide{
+  text-align:center;
+  font-size:40px;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+footer ion-icon {
+  margin-bottom: 10px; /* Adjust the spacing between the logos and text as needed */
+}
+
+
+footer p {
+  margin: 0;
+}
+footer ion-icon,
+footer p {
+  display: flex;
+  align-items: center;
+  margin: 0 10px; /* Adjust the spacing between elements as needed */
+}
+
+footer ion-icon:not(:last-child)::after,
+footer p:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 1px; /* Adjust the width of the vertical line as needed */
+  height: 20px; /* Adjust the height of the vertical line as needed */
+  background-color: black; /* Adjust the color of the vertical line as needed */
+  margin-left: 10px; /* Adjust the spacing between the icon/text and the line as needed */
+}
+footer .icon-container {
+  display: flex;
+}
+
+footer .icon-container ion-icon:not(:last-child) {
+  margin-right: 10px; /* Adjust the spacing between the logos as needed */
+  
+}
+
+.icon-container{
+  font-size:45px;
+}
+
+.text-container{
+
+  font-size:35px;
+}
+footer .text-container {
+  display: flex;
+}
+
+footer .text-container p:not(:last-child) {
+  margin-right: 10px; /* Adjust the spacing between the text as needed */
+}
+

@@ -1,0 +1,73 @@
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+    margin-left:30px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .imagechange {
+    height:50%;
+    width:50%;
+  }
+
+  .alcohol {
+    text-align:center;
+    font-size:50px;
+    text-decoration:underline;
+  }
+   .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Adjust minmax values for card width */
+    gap: 200px; /* Adjust gap between cards */
+    margin: 0 auto; /* Center the container horizontally (optional) */
+  } 
+
+  .alohol2 {
+    text-align:center;
+    font-size:50px;
+  }
+  .prices {
+    color:rgb(167, 39, 39);
+  }
+  .ratings, .cart-button-container {
+    margin-bottom: 10px; /* Adjust the value as needed */
+  }
+  .ratings {
+    text-align: center;
+    margin-top: 10px;
+  }

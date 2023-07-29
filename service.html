@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Enquiry</title>
+    <link rel="stylesheet" href="sales.css"> 
+    <link rel="stylesheet" href="NavBar.css">
+   
+</head>
+<body>
+    <div class="nav-container">
+        <ol class="nav">
+                Savora
+            <div class="icon">
+              <a href=#top><img src="bottle.png" alt="logo" class="symbol"></a>
+          </div>
+            <li class="navbar"><a href="index.html" >About Us</a></li>
+            <li class="navbar"><a href="ViewProduct.html" target="_blank">View Products</a></li>
+            <li class="navbar"><a href="Findus.html" target="_blank">Find us</a></li>
+            <li class="navbar active"><a href="ContactUs.html" target="_blank">Contact us</a></li>
+            <div class="icon">
+              
+              <img src="shopping-cart.png" alt="shopping-cart" class="symbol">
+              <a href="signup.html" target="_blank"><img src="user.png" alt="user-login" class="symbol"></a>
+            </div>
+        </ol>
+    </div>
+
+    <form action="salesqnsdone.html" method="get">
+    <section class="contact">
+        <div class="content">
+            <h2> Contact Us</h2>
+            <p> Fill free to ask any <span class="serve">service</span> required questions and we will try to answer it as soon as possible.</p>
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p> 26 Paterson Rd <br> 238518 <br> Singapore</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p> +65 6550 8893</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>Savora@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Your message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required" placeholder="Full name">
+                        
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="" required="required" placeholder="Email">
+                        
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" placeholder="Send your message.."></textarea>
+                        
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+
+    </section>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Get a reference to the form element
+          let form = document.getElementById('contactForms');
+      
+          // Add a submit event listener to the form
+          form.addEventListener('submit', function(event) {
+            // Get the values of the form fields
+            let firstNameinput = document.getElementById('name1').value;
+            let emailinput = document.getElementById('email1').value;
+            let messageinput = document.getElementById('msg1').value;
+      
+            // Create an object to store the form data
+            let formData = {
+                Name: firstNameinput,
+              email: emailinput,
+              Messages : messageinput
+            };
+      
+            
+            console.log('First Name:', firstNameinput);
+            console.log('Email:', emailinput);
+            console.log('Message:', messageinput);
+      
+            // Reset the form after logging the data
+            form.reset();
+      
+            // Navigate to the next page (Paymentdone.html) after form submission
+            window.location.href = 'salesqnsdone.html';
+      
+            // Prevent the default form submission behavior
+            event.preventDefault();
+    
+            // Store the form data in local storage
+          localStorage.setItem('formData', JSON.stringify(formData));
+          });
+        });
+      </script>
+</body>
+</html>
